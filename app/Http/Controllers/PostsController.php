@@ -13,7 +13,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('posts.ShowAllPosts');
+        // $var=Posts::all();
+        // $var=Posts::where('title','My First Post')->get();
+        $var=Posts::orderBy('created_at','desc')->get();
+        return view('posts.ShowAllPosts')->with('var',$var);
     }
 
     /**
@@ -45,7 +48,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('posts.show');
     }
 
     /**
