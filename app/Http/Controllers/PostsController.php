@@ -26,7 +26,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.createPost');
     }
 
     /**
@@ -48,7 +48,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        return view('posts.show');
+        // $var=Posts::where('id',$id)->get();
+        $v=Posts::find($id);
+        return view('posts.show')->with('v',$v);
     }
 
     /**

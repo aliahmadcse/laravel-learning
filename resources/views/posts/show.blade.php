@@ -1,1 +1,10 @@
-<h1>123</h1>
+@extends('layouts.viewdata')
+
+@section('content')
+    <div class="card">
+        <h1>{{$v->title}}</h1>
+        <p>{{$v->detail}}</p>
+    </div>
+    <small>{{$v->created_at}}</small>
+    
+@endsection
