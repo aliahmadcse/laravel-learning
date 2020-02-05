@@ -16,6 +16,12 @@
         <li class="nav-item">
         <a class="nav-link" href="{{url('/services')}}">services</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{{url('/posts/create')}}">Create Post</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{{url('/posts')}}">Show All Post</a>
+        </li>
       </ul>
     </div>
   </nav>
