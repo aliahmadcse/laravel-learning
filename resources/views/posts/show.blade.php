@@ -6,5 +6,6 @@
         <p>{{$v->detail}}</p>
     </div>
     <small>{{$v->created_at}}</small>
-    
+    <a href="{{url('posts/'$v->id'/edit')}}">Edit</a>
+
 @endsection

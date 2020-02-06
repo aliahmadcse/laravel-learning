@@ -37,7 +37,11 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        return '123';
+        $p=new Posts();
+        $p->title=$request->txt_title;
+        $p->detail=$request->txt_detail;
+        $p->save();
+        return redirect('/posts');
     }
 
     /**
@@ -61,7 +65,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return 123;
     }
 
     /**
