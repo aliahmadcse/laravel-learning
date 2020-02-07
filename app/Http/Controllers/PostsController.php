@@ -79,7 +79,7 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         $p=Posts::Find($id);
-        $p->title=$request->txt_tilte;
+        $p->title=$request->txt_title;
         $p->detail=$request->txt_detail;
         $p->save();
         return redirect('/posts');
