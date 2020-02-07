@@ -65,7 +65,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        return 123;
+        $v=Posts::find($id);
+        return view('posts.edit')->with('v',$v);
     }
 
     /**
@@ -77,7 +78,11 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $p=new Posts();
+        $p->title=$request->txt_tilte;
+        $p->detail=$request->txt_detail;
+        $p->save();
+        return redirect('/posts');
     }
 
     /**
@@ -88,6 +93,8 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $v=new Posts();
+        $v->destroy($id);
+        return redirect('/posts');
     }
 }
